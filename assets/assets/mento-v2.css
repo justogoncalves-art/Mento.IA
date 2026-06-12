@@ -1,0 +1,130 @@
+/* ============================================================
+   MENTO.IA — V2 design layer
+   Hero journey path · keyword marquee · scroll-highlight
+   manifesto · sticky phase stack · mobile nav · XL final CTA
+   ============================================================ */
+
+/* ——————————————————— SECTION INDEX ——————————————————— */
+.eyebrow .sx { font-style: normal; font-weight: 700; color: var(--teal); letter-spacing: .08em; }
+.eyebrow .sx::after { content: " /"; color: var(--ink-faint); }
+.eyebrow.on-dark .sx::after { color: rgba(253,253,253,.35); }
+
+/* ——————————————————— HERO JOURNEY PATH ——————————————————— */
+.hero-path { position: absolute; right: -4%; top: 6%; width: min(46vw, 680px); height: auto; z-index: 1;
+  pointer-events: none; opacity: .9; }
+@media (max-width: 960px){ .hero-path { display: none; } }
+.hero-path .jp { stroke-dashoffset: 0; }
+.hero-path .wp, .hero-path .wt { opacity: 1; }
+@media (prefers-reduced-motion: no-preference){
+  .hero-path .jp { stroke-dasharray: 1; stroke-dashoffset: 1; animation: jp-draw 2.4s var(--ease-out) .3s forwards; }
+  .hero-path .wp, .hero-path .wt { opacity: 0; animation: jp-pop .8s var(--ease-out) forwards; }
+  .hero-path .wp1, .hero-path .wt1 { animation-delay: .7s; }
+  .hero-path .wp2, .hero-path .wt2 { animation-delay: 1.5s; }
+  .hero-path .wp3, .hero-path .wt3 { animation-delay: 2.4s; }
+}
+@keyframes jp-draw { to { stroke-dashoffset: 0; } }
+@keyframes jp-pop { to { opacity: 1; } }
+
+/* ——————————————————— KEYWORD MARQUEE ——————————————————— */
+.marquee { background: var(--cosmos); border-top: 1px solid rgba(253,253,253,.08); border-bottom: 1px solid rgba(253,253,253,.06);
+  overflow: hidden; padding: 17px 0; position: relative; z-index: 2; }
+.marquee-track { display: flex; width: max-content; gap: 56px; }
+@media (prefers-reduced-motion: no-preference){
+  .marquee-track { animation: mq-roll 38s linear infinite; }
+  .marquee:hover .marquee-track { animation-play-state: paused; }
+}
+@keyframes mq-roll { to { transform: translateX(calc(-50% - 28px)); } }
+.marquee-group { display: inline-flex; align-items: center; gap: 56px; white-space: nowrap; }
+.marquee-group span { font-family: var(--display); font-size: 13px; font-weight: 600; letter-spacing: .24em;
+  text-transform: uppercase; color: rgba(253,253,253,.55); }
+.marquee-group i { width: 5px; height: 5px; border-radius: 50%; background: var(--teal); opacity: .7; flex: none; }
+
+/* ——————————————————— MANIFESTO (scroll word highlight) ——————————————————— */
+.manifesto { padding-block: clamp(70px, 9vw, 140px); background: var(--paper); }
+.manifesto .wrap { max-width: 1020px; }
+.manifesto-text { font-family: var(--display); font-weight: 600; font-size: clamp(25px, 3.5vw, 50px);
+  line-height: 1.3; letter-spacing: -.015em; text-wrap: pretty; }
+.manifesto-text .w { color: color-mix(in oklab, var(--ink) 15%, transparent); transition: color .35s var(--ease); }
+.manifesto-text .w.on { color: var(--ink); }
+.manifesto-text .w.acc { font-style: normal; }
+.manifesto-text .w.acc.on { color: var(--blue); }
+@media (prefers-reduced-motion: reduce){ .manifesto-text .w { color: var(--ink); } .manifesto-text .w.acc { color: var(--blue); } }
+
+/* ——————————————————— STICKY PHASE STACK ——————————————————— */
+.phase-stack { margin-top: clamp(40px, 6vw, 70px); }
+.phase-slot { position: relative; }
+.phasecard { background: #fff; border: 1px solid var(--line); border-radius: 28px;
+  padding: clamp(30px, 4.5vw, 60px); position: relative; overflow: hidden;
+  box-shadow: 0 30px 80px -45px rgba(6,7,84,.35);
+  display: grid; grid-template-columns: 0.9fr 1.1fr; gap: clamp(24px, 4vw, 64px); align-items: start;
+  transform-origin: center top; will-change: transform; }
+.phasecard::before { content: ""; position: absolute; inset: 0 0 auto 0; height: 6px; background: var(--pc); }
+.phasecard.p1 { --pc: var(--phase-1); }
+.phasecard.p2 { --pc: var(--phase-2); }
+.phasecard.p3 { --pc: var(--phase-3); }
+.phasecard .ph-meta { display: flex; align-items: center; gap: 14px; }
+.phasecard .ph-n { font-family: var(--display); font-size: 14px; font-weight: 700; letter-spacing: .18em;
+  text-transform: uppercase; color: color-mix(in oklab, var(--pc) 78%, var(--ink)); white-space: nowrap; }
+.phasecard .ph-age { font-family: var(--display); font-size: 13px; font-weight: 600; letter-spacing: .06em;
+  color: var(--ink-faint); padding: 5px 12px; border: 1px solid var(--line); border-radius: 999px; white-space: nowrap; }
+.phasecard h3 { font-size: clamp(28px, 3.6vw, 48px); margin-top: 18px; letter-spacing: -.025em; }
+.phasecard .ph-big { font-family: var(--display); font-weight: 700; font-size: clamp(64px, 8vw, 120px);
+  line-height: .9; letter-spacing: -.04em; color: color-mix(in oklab, var(--pc) 22%, white);
+  -webkit-text-stroke: 1.5px color-mix(in oklab, var(--pc) 55%, transparent); margin-top: 26px; }
+.phasecard .ph-right p { font-size: clamp(16px, 1.6vw, 19px); color: var(--ink-soft); line-height: 1.65; }
+.phasecard .ph-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 24px; }
+.phasecard .ph-tags span { font-family: var(--display); font-size: 13px; font-weight: 600; padding: 7px 14px; border-radius: 999px;
+  background: color-mix(in oklab, var(--pc) 12%, white); color: color-mix(in oklab, var(--pc) 72%, var(--ink)); }
+.phasecard .ph-list { list-style: none; margin: 22px 0 0; padding: 0; display: flex; flex-direction: column; gap: 0; }
+.phasecard .ph-list li { display: flex; gap: 12px; align-items: center; padding: 13px 0; border-top: 1px solid var(--line-2);
+  font-size: 15.5px; color: var(--ink-soft); font-weight: 500; }
+.phasecard .ph-list li::before { content: ""; width: 6px; height: 6px; border-radius: 50%;
+  background: var(--pc); flex: none; }
+
+@media (min-width: 861px){
+  .phase-slot { height: 86vh; }
+  .phase-slot:last-child { height: auto; }
+  .phase-slot .phasecard { position: sticky; top: 104px; }
+}
+@media (max-width: 860px){
+  .phasecard { grid-template-columns: 1fr; gap: 18px; margin-bottom: 18px; }
+  .phasecard .ph-big { font-size: 56px; margin-top: 14px; }
+}
+
+/* ——————————————————— MOBILE NAV ——————————————————— */
+.nav-burger { display: none; width: 42px; height: 42px; border-radius: 10px; border: 1px solid rgba(253,253,253,.2);
+  flex-direction: column; align-items: center; justify-content: center; gap: 5px; flex: none; }
+.nav.solid .nav-burger { border-color: var(--line); }
+.nav-burger span { display: block; width: 18px; height: 2px; border-radius: 2px; background: #fff; transition: transform .3s var(--ease), opacity .3s; }
+.nav.solid .nav-burger span { background: var(--ink); }
+.nav-open .nav-burger span:nth-child(1){ transform: translateY(7px) rotate(45deg); }
+.nav-open .nav-burger span:nth-child(2){ opacity: 0; }
+.nav-open .nav-burger span:nth-child(3){ transform: translateY(-7px) rotate(-45deg); }
+.nav-panel { position: fixed; inset: 0; z-index: 90; background: color-mix(in srgb, var(--cosmos) 96%, transparent);
+  backdrop-filter: blur(14px); display: flex; flex-direction: column; justify-content: center; padding: 90px var(--gutter) 50px;
+  opacity: 0; pointer-events: none; transition: opacity .35s var(--ease); }
+.nav-open .nav-panel { opacity: 1; pointer-events: auto; }
+.nav-panel a { font-family: var(--display); font-size: clamp(28px, 7vw, 40px); font-weight: 700; color: #fff;
+  padding: 14px 0; border-bottom: 1px solid rgba(253,253,253,.1); letter-spacing: -.02em;
+  display: flex; justify-content: space-between; align-items: center; }
+.nav-panel a::after { content: "→"; font-size: .6em; color: var(--teal); }
+.nav-panel .nav-panel-cta { margin-top: 30px; border: none; font-size: 18px; justify-content: center; }
+.nav-panel .nav-panel-cta::after { content: none; }
+@media (max-width: 880px){
+  .nav-burger { display: inline-flex; }
+  .nav .btn-primary { display: none; }
+  .nav-open .nav .btn-primary { display: none; }
+}
+@media (min-width: 881px){ .nav-panel { display: none; } }
+
+/* ——————————————————— XL FINAL CTA ——————————————————— */
+.final-cta-row { display: flex; align-items: center; gap: 26px; flex-wrap: wrap; margin-top: 48px; }
+.btn-xl { padding: 21px 42px; font-size: 18px; border-radius: 14px; }
+.final-note { font-size: 14.5px; color: rgba(253,253,253,.55); max-width: 320px; line-height: 1.5; }
+
+/* ——————————————————— RIASEC alignment (replaces inline tweaks) ——————————————————— */
+.bar-row { grid-template-columns: 96px 1fr 36px; }
+
+/* hero meta: keep figures on one line */
+.hero-meta .m { white-space: nowrap; }
+.hero-meta .m span { white-space: normal; }

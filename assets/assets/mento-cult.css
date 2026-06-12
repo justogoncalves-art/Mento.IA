@@ -1,0 +1,85 @@
+/* ============================================================
+   MENTO.IA — "Cult layer"
+   Patterns adapted from cult-ui (border-beam, animated gradient
+   mesh, grain texture, 3D tilt, blur reveal, spring numbers),
+   rebuilt in vanilla CSS/JS — brand palette only, minimalist.
+   ============================================================ */
+
+@property --beam-angle { syntax: "<angle>"; initial-value: 0deg; inherits: false; }
+
+/* ——————————————————— BORDER BEAM ——————————————————— */
+/* A thin traveling light around an element. Add class "beam". */
+.beam { position: relative; isolation: isolate; }
+.beam::before {
+  content: ""; position: absolute; inset: 0; border-radius: inherit; padding: 1.5px;
+  background: conic-gradient(from var(--beam-angle),
+    transparent 0deg, transparent 250deg,
+    color-mix(in oklab, var(--teal) 90%, white) 300deg,
+    var(--blue) 330deg, transparent 360deg);
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor; mask-composite: exclude;
+  pointer-events: none; z-index: 1;
+  animation: beam-spin 5s linear infinite;
+}
+@keyframes beam-spin { to { --beam-angle: 360deg; } }
+@media (prefers-reduced-motion: reduce){ .beam::before { animation: none; opacity: .5; } }
+
+/* Beam on the primary buttons — kept very subtle */
+.btn-primary.beam::before { padding: 1.4px; opacity: .9; }
+
+/* ——————————————————— ANIMATED GRADIENT MESH ——————————————————— */
+/* Slow drift on the brand glows in dark sections (replaces static). */
+@media (prefers-reduced-motion: no-preference){
+  .glow-1 { animation: mesh-a 18s ease-in-out infinite; }
+  .glow-2 { animation: mesh-b 22s ease-in-out infinite; }
+  .glow-3 { animation: mesh-c 20s ease-in-out infinite; }
+}
+@keyframes mesh-a { 0%,100%{ transform: translate(0,0) scale(1); } 50%{ transform: translate(3%,-4%) scale(1.1); } }
+@keyframes mesh-b { 0%,100%{ transform: translate(0,0) scale(1); } 50%{ transform: translate(-5%,3%) scale(1.14); } }
+@keyframes mesh-c { 0%,100%{ transform: translate(0,0) scale(1); } 50%{ transform: translate(4%,5%) scale(1.08); } }
+
+/* ——————————————————— GRAIN TEXTURE ——————————————————— */
+/* Reusable fine grain over dark surfaces — cult-ui "texture" feel. */
+.dark, .hero, .final, .video-sec { position: relative; }
+.dark::after, .final::after {
+  content: ""; position: absolute; inset: 0; z-index: 1; pointer-events: none; opacity: .5;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.35'/%3E%3C/svg%3E");
+}
+.dark > .wrap, .final > .final-inner { position: relative; z-index: 2; }
+
+/* ——————————————————— 3D TILT ——————————————————— */
+[data-tilt] { transform-style: preserve-3d; transition: transform .4s var(--ease); will-change: transform; }
+[data-tilt] > * { transform: translateZ(0); }
+@media (prefers-reduced-motion: reduce){ [data-tilt] { transform: none !important; } }
+
+/* ——————————————————— BLUR-IN REVEAL ——————————————————— */
+@media (prefers-reduced-motion: no-preference){
+  .reveal { filter: blur(7px); transition: opacity .9s var(--ease-out), transform .9s var(--ease-out), filter .9s var(--ease-out); }
+  .reveal.in { filter: blur(0); }
+}
+
+/* ——————————————————— SPRING NUMBER POP ——————————————————— */
+.count.pop { animation: num-pop .5s var(--ease-out); }
+@keyframes num-pop { 0%{ transform: scale(1); } 38%{ transform: scale(1.07); } 100%{ transform: scale(1); } }
+.stat .num, .tstat .num, .hero-meta .m b { display: inline-block; }
+
+/* ——————————————————— SHIMMER (hero pill) ——————————————————— */
+.hero .pill { position: relative; overflow: hidden; white-space: nowrap; }
+.hero .pill::after {
+  content: ""; position: absolute; top: 0; left: -60%; width: 50%; height: 100%;
+  background: linear-gradient(100deg, transparent, rgba(93,224,230,.35), transparent);
+  transform: skewX(-18deg);
+  animation: shimmer 5.5s ease-in-out infinite;
+}
+@keyframes shimmer { 0%,72%{ left: -60%; } 88%,100%{ left: 130%; } }
+@media (prefers-reduced-motion: reduce){ .hero .pill::after { display: none; } }
+
+/* ——————————————————— REFINED CARD ELEVATION ——————————————————— */
+.phase, .rcard, .scard, .app, .quote, .tquote {
+  transition: transform .45s var(--ease), box-shadow .45s var(--ease), border-color .4s; }
+.app { box-shadow: 0 50px 110px -50px rgba(6,7,84,.5), 0 18px 40px -28px rgba(6,7,84,.28); }
+
+/* Glow-on-hover for primary ecosystem core */
+.eco-core { position: relative; }
+.eco-core.beam::before { padding: 2px; }
