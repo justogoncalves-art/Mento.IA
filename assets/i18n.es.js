@@ -25,9 +25,8 @@ window.MENTO_I18N = {
     "form.cargo": "Cargo", "form.pais": "País", "form.motivo": "Motivo", "form.opt": "(opcional)",
     "form.motivoph": "¿Qué te gustaría ver en la demo?",
     "form.submit": "Solicitar demo",
-    "form.note": "Al enviar se abrirá tu correo con el mensaje listo para hola@mypathia.com.",
-    "form.okt": "¡Casi listo!",
-    "form.okd": "Hemos abierto tu correo con la solicitud preparada para hola@mypathia.com. Solo pulsa enviar y te responderemos muy pronto.",
+    "form.okt": "¡Listo!",
+    "form.okd": "En menos de 24 hs alguien del equipo se contactará contigo :)",
     "form.close": "Cerrar",
 
     "hero.pill": "Un programa de MyPath.IA",

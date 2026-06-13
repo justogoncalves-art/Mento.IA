@@ -21,9 +21,8 @@ window.MENTO_I18N.en = {
   "form.cargo": "Role", "form.pais": "Country", "form.motivo": "Reason", "form.opt": "(optional)",
   "form.motivoph": "What would you like to see in the demo?",
   "form.submit": "Request a demo",
-  "form.note": "On submit, your email app opens with the message ready for hola@mypathia.com.",
-  "form.okt": "Almost done!",
-  "form.okd": "We've opened your email with the request prepared for hola@mypathia.com. Just hit send and we'll reply very soon.",
+  "form.okt": "Done!",
+  "form.okd": "Someone from our team will get in touch within 24 hours :)",
   "form.close": "Close",
 
   "hero.pill": "A program by MyPath.IA",
