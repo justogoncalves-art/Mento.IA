@@ -5,7 +5,8 @@
 ## Contenido
 
 ```
-index.html          Página principal (EN por defecto · ES · PT)
+index.html              Página principal (EN por defecto · ES · PT)
+google-apps-script.gs   Script para Google Sheets (instálalo en tu hoja; ver abajo)
 assets/
   mento.css           Design system: tokens de marca, tipografía, base
   mento-sections.css  Hero, problema, fases, capítulos
@@ -29,13 +30,18 @@ assets/
 ## Formulario de demo → Google Sheets
 
 El formulario ya está conectado al Apps Script de la hoja de cálculo
-(`window.MENTO_FORM_ENDPOINT` en `index.html`). Cada envío:
+(`window.MENTO_FORM_ENDPOINT` en `index.html`). Campos enviados:
 
-- añade una fila a la hoja (fecha, nombre, apellido, colegio, cargo, país, motivo, idioma), y
-- envía un aviso por correo a `hola@mypathia.com`.
+- **Plataforma** — fijo `Mento.IA` (bloqueado para el usuario, pero se registra)
+- Nombre, Apellido, Institución, Cargo, País — obligatorios
+- Motivo — desplegable (demo gratis / más información / viabilidad institucional)
 
-Si algún día regeneras la implementación del Apps Script, copia la nueva URL `/exec`
-y reemplázala en `index.html` (línea `window.MENTO_FORM_ENDPOINT = "..."`).
+Cada envío añade una fila a la hoja (fecha, plataforma, nombre, apellido, institución,
+cargo, país, motivo, idioma) y envía un aviso por correo a `hola@mypathia.com`.
+
+Si regeneras el script de Google (`google-apps-script.gs`), pega de nuevo el código
+en Extensiones → Apps Script, vuelve a implementar y copia la nueva URL `/exec`
+en `index.html` (línea `window.MENTO_FORM_ENDPOINT = "..."`).
 
 ## Idiomas
 

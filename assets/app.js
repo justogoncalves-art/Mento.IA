@@ -232,6 +232,7 @@
       var get = function (n) { var el = form.elements[n]; return el ? el.value.trim() : ""; };
       var nombre = get("nombre"), apellido = get("apellido"), colegio = get("colegio"),
           cargo = get("cargo"), pais = get("pais"), motivo = get("motivo");
+      var plataforma = get("plataforma") || "Mento.IA";
       var lang = document.documentElement.getAttribute("lang") || "es";
       var L = {
         es: { subj: "Solicitud de demo · Mento.IA", intro: "Nueva solicitud de demo desde la web de Mento.IA:",
@@ -246,6 +247,7 @@
       if (endpoint) {
         // Send to Google Sheets via Apps Script web app
         var params = new URLSearchParams({
+          plataforma: plataforma,
           nombre: nombre, apellido: apellido, colegio: colegio, cargo: cargo,
           pais: pais, motivo: motivo, lang: lang, fecha: new Date().toISOString()
         });
@@ -260,6 +262,7 @@
       }
       // Fallback (endpoint not configured yet): deliver via mail client
       var body = t.intro + "\n\n" +
+        "Plataforma: " + plataforma + "\n" +
         t.nombre + ": " + nombre + "\n" +
         t.apellido + ": " + apellido + "\n" +
         t.colegio + ": " + colegio + "\n" +

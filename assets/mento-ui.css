@@ -91,7 +91,19 @@
   border:1.5px solid var(--line); border-radius:11px; background: var(--paper); transition: border-color .25s, box-shadow .25s; }
 .field input::placeholder { color: var(--ink-faint); font-weight:500; }
 .field input:focus { outline:none; border-color: var(--blue); box-shadow: 0 0 0 4px color-mix(in oklab, var(--blue) 14%, transparent); }
-.field input:user-invalid { border-color: #d6455d; }
+.field input:user-invalid, .field select:user-invalid { border-color: #d6455d; }
+/* select styled like inputs */
+.field select { font-family: var(--sans); font-size:15.5px; font-weight:500; color: var(--ink); padding:12px 14px;
+  border:1.5px solid var(--line); border-radius:11px; background: var(--paper); transition: border-color .25s, box-shadow .25s;
+  appearance:none; -webkit-appearance:none; cursor:pointer;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%23737373' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat:no-repeat; background-position: right 14px center; padding-right:40px; }
+.field select:focus { outline:none; border-color: var(--blue); box-shadow: 0 0 0 4px color-mix(in oklab, var(--blue) 14%, transparent); }
+.field select:invalid { color: var(--ink-faint); }
+/* locked / read-only platform field */
+.field input.locked { background: var(--ice); color: var(--ink-soft); cursor:not-allowed; font-weight:600;
+  border-color: var(--line-2); }
+.field input.locked:focus { box-shadow:none; border-color: var(--line-2); }
 .modal-submit { width:100%; justify-content:center; margin-top: 6px; padding: 15px; }
 .form-note { font-size:12.5px; color: var(--ink-faint); text-align:center; line-height:1.5; margin-top:2px; }
 .modal-success { text-align:center; padding: 30px 10px 10px; }
