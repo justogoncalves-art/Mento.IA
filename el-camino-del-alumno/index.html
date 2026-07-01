@@ -1,0 +1,1120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>El camino del alumno · 12 a 18 años · Mento.IA</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* ── Reset & tokens ─────────────────────────────────────────── */
+*,*::before,*::after { box-sizing:border-box; margin:0; padding:0 }
+:root {
+  --teal:   #5de0e6;
+  --blue:   #004aad;
+  --navy:   #060754;
+  --bg:     #fdfdfd;
+  --card:   #f0f6ff;
+  --gray:   #737373;
+  --gray-l: #d9d9d9;
+  --grad:   linear-gradient(90deg,#5de0e6,#004aad);
+  --grad-t: linear-gradient(90deg,#5de0e6 0%,#004aad 100%);
+
+  /* Stage colours */
+  --s1: #0F766E;  /* teal dark  · 12-14 */
+  --s2: #1D4ED8;  /* blue       · 14-16 */
+  --s3: #7C3AED;  /* violet     · 16-18 */
+  --s1l: #E6FFFA;
+  --s2l: #EEF2FF;
+  --s3l: #F5F3FF;
+
+  --sans:  'Space Grotesk', sans-serif;
+  --body:  'Quicksand', sans-serif;
+}
+
+html { font-size: 15px; }
+body {
+  font-family: var(--sans);
+  background: var(--bg);
+  color: var(--navy);
+  line-height: 1.6;
+}
+
+/* ── Shell ───────────────────────────────────────────────────── */
+.page { max-width: 920px; margin: 0 auto; padding: 0 28px 80px; }
+
+/* ── Top bar ─────────────────────────────────────────────────── */
+.topbar { height: 5px; background: var(--grad); }
+
+/* ── Header ──────────────────────────────────────────────────── */
+.header {
+  padding: 48px 0 36px;
+  border-bottom: 1.5px solid var(--navy);
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: end;
+  gap: 20px;
+}
+.header-left {}
+.header-kicker {
+  font-size: 10px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: var(--gray);
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.header-kicker::before {
+  content: '';
+  width: 28px; height: 2px;
+  background: var(--grad);
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+.header-title {
+  font-size: clamp(30px,5vw,46px);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -.025em;
+  color: var(--navy);
+  margin-bottom: 10px;
+}
+.gt {
+  background: var(--grad-t);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.header-sub {
+  font-family: var(--body);
+  font-size: 15px;
+  color: var(--gray);
+  font-weight: 400;
+  max-width: 520px;
+  line-height: 1.65;
+}
+.header-badge {
+  background: var(--navy);
+  color: var(--bg);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  padding: 8px 16px;
+  border-radius: 3px;
+  white-space: nowrap;
+  align-self: start;
+}
+
+/* ── Section label ───────────────────────────────────────────── */
+.sec-label {
+  font-size: 9.5px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: var(--gray);
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.sec-label::after { content:''; flex:1; height:1px; background:var(--gray-l); }
+
+/* ── Section ─────────────────────────────────────────────────── */
+.section { margin-top: 56px; }
+.section-title {
+  font-size: clamp(20px,3.5vw,28px);
+  font-weight: 700;
+  letter-spacing: -.02em;
+  color: var(--navy);
+  margin-bottom: 8px;
+  line-height: 1.2;
+}
+.section-intro {
+  font-family: var(--body);
+  font-size: 14px;
+  color: var(--gray);
+  max-width: 680px;
+  line-height: 1.7;
+  margin-bottom: 28px;
+}
+
+/* ── CONTEXT BLOCK (the problem) ────────────────────────────── */
+.context-grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 1px;
+  background: var(--gray-l);
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 28px;
+}
+@media(max-width:640px){ .context-grid { grid-template-columns:1fr; } }
+
+.ctx-cell {
+  background: var(--bg);
+  padding: 24px 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.ctx-stat {
+  font-size: clamp(32px,6vw,48px);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -.03em;
+}
+.ctx-label {
+  font-family: var(--body);
+  font-size: 13px;
+  color: var(--gray);
+  line-height: 1.55;
+  font-weight: 400;
+}
+.ctx-source {
+  font-size: 9px;
+  letter-spacing: 1px;
+  color: var(--gray-l);
+  margin-top: 2px;
+  text-transform: uppercase;
+}
+
+.problem-text {
+  background: var(--navy);
+  border-radius: 12px;
+  padding: 28px 32px;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 28px;
+}
+.problem-text::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 80% 50%, rgba(93,224,230,.1) 0%, transparent 55%);
+}
+.problem-text p {
+  font-family: var(--body);
+  font-size: 16px;
+  color: rgba(255,255,255,.9);
+  line-height: 1.7;
+  font-weight: 400;
+  position: relative;
+  margin-bottom: 10px;
+}
+.problem-text p:last-child { margin-bottom: 0; }
+.problem-text strong { color: var(--teal); font-weight: 600; }
+
+/* ── JOURNEY — the main timeline ─────────────────────────────── */
+.journey {
+  position: relative;
+  margin-bottom: 0;
+}
+
+/* Vertical line */
+.journey::before {
+  content: '';
+  position: absolute;
+  left: 38px;
+  top: 20px;
+  bottom: 20px;
+  width: 2px;
+  background: var(--grad-t);
+  border-radius: 2px;
+}
+@media(max-width:640px){ .journey::before { left:24px; } }
+
+.journey-stage {
+  position: relative;
+  padding-left: 80px;
+  margin-bottom: 40px;
+}
+@media(max-width:640px){ .journey-stage { padding-left:60px; } }
+
+/* Stage node */
+.stage-node {
+  position: absolute;
+  left: 20px;
+  top: 18px;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  font-weight: 700;
+  color: #fff;
+  z-index: 1;
+  flex-shrink: 0;
+}
+@media(max-width:640px){ .stage-node { left:6px; width:32px; height:32px; font-size:13px; } }
+
+.stage-node.s1 { background: var(--s1); }
+.stage-node.s2 { background: var(--s2); }
+.stage-node.s3 { background: var(--s3); }
+
+/* Stage card */
+.stage-card {
+  border: 1.5px solid var(--gray-l);
+  border-radius: 12px;
+  overflow: hidden;
+  background: #fff;
+}
+.stage-head {
+  padding: 16px 20px 14px;
+  border-bottom: 1px solid var(--card);
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: start;
+  gap: 12px;
+}
+.stage-tag {
+  font-size: 9.5px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+  font-weight: 600;
+}
+.stage-name {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--navy);
+  letter-spacing: -.015em;
+  line-height: 1.2;
+}
+.stage-ages {
+  font-family: var(--body);
+  font-size: 12px;
+  color: var(--gray);
+  font-weight: 400;
+  margin-top: 3px;
+}
+.stage-badge {
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 5px 12px;
+  border-radius: 3px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.s1 .stage-tag, .s1 .stage-badge { color: var(--s1); }
+.s2 .stage-tag, .s2 .stage-badge { color: var(--s2); }
+.s3 .stage-tag, .s3 .stage-badge { color: var(--s3); }
+.s1 .stage-badge { background: var(--s1l); }
+.s2 .stage-badge { background: var(--s2l); }
+.s3 .stage-badge { background: var(--s3l); }
+
+.stage-body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+}
+@media(max-width:580px){ .stage-body { grid-template-columns:1fr; } }
+
+.stage-col {
+  padding: 18px 20px;
+}
+.stage-col + .stage-col {
+  border-left: 1px solid var(--card);
+}
+@media(max-width:580px){ .stage-col + .stage-col { border-left:none; border-top:1px solid var(--card); } }
+
+.col-label {
+  font-size: 9px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--gray);
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+.col-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.col-list li {
+  font-family: var(--body);
+  font-size: 13px;
+  color: var(--navy);
+  line-height: 1.5;
+  padding-left: 14px;
+  position: relative;
+  font-weight: 400;
+}
+.col-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 7px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.s1 .col-list li::before { background: var(--s1); }
+.s2 .col-list li::before { background: var(--s2); }
+.s3 .col-list li::before { background: var(--s3); }
+
+.col-list li strong { font-weight: 600; color: var(--navy); }
+
+/* Instrument chips in stage */
+.instr-row {
+  padding: 12px 20px;
+  border-top: 1px solid var(--card);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+  background: #FAFBFF;
+}
+.instr-label-sm {
+  font-size: 9px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--gray);
+  margin-right: 4px;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+.chip {
+  font-size: 10.5px;
+  font-weight: 500;
+  padding: 3px 10px;
+  border-radius: 20px;
+  white-space: nowrap;
+}
+.s1 .chip { background: var(--s1l); color: var(--s1); }
+.s2 .chip { background: var(--s2l); color: var(--s2); }
+.s3 .chip { background: var(--s3l); color: var(--s3); }
+.chip.new { font-weight: 700; }
+
+/* What Mento does callout inside stage */
+.mento-callout {
+  padding: 14px 20px;
+  border-top: 1px solid var(--card);
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+.mento-icon {
+  font-size: 20px;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+.mento-text {
+  font-family: var(--body);
+  font-size: 12.5px;
+  color: var(--gray);
+  line-height: 1.6;
+  font-weight: 400;
+}
+.mento-text strong { color: var(--navy); font-weight: 600; }
+
+/* ── IMPACT section ──────────────────────────────────────────── */
+.impact-grid {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 12px;
+  margin-bottom: 24px;
+}
+@media(max-width:600px){ .impact-grid { grid-template-columns:1fr; } }
+
+.impact-card {
+  border: 1.5px solid var(--gray-l);
+  border-radius: 10px;
+  padding: 20px 18px;
+  background: #fff;
+  border-left: 4px solid var(--teal);
+}
+.impact-card.b { border-left-color: var(--blue); }
+.impact-card.n { border-left-color: var(--navy); }
+.impact-card.t2 { border-left-color: var(--s3); }
+
+.impact-num {
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: -.02em;
+  margin-bottom: 4px;
+  line-height: 1;
+}
+.impact-card:not(.b):not(.n):not(.t2) .impact-num { color: var(--teal); }
+.impact-card.b .impact-num { color: var(--blue); }
+.impact-card.n .impact-num { color: var(--navy); }
+.impact-card.t2 .impact-num { color: var(--s3); }
+.impact-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--navy);
+  margin-bottom: 5px;
+}
+.impact-desc {
+  font-family: var(--body);
+  font-size: 12.5px;
+  color: var(--gray);
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+/* ── CONVICTION section ──────────────────────────────────────── */
+.conviction-block {
+  background: var(--navy);
+  border-radius: 12px;
+  padding: 36px 36px 32px;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 28px;
+}
+.conviction-block::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 20% 80%, rgba(93,224,230,.1) 0%, transparent 55%),
+              radial-gradient(ellipse at 80% 20%, rgba(0,74,173,.2) 0%, transparent 55%);
+}
+.conviction-kicker {
+  font-size: 9.5px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,.35);
+  margin-bottom: 16px;
+  position: relative;
+}
+.conviction-quote {
+  font-family: var(--body);
+  font-size: clamp(17px,3vw,22px);
+  font-weight: 600;
+  color: #fff;
+  line-height: 1.5;
+  position: relative;
+  margin-bottom: 22px;
+  max-width: 680px;
+}
+.conviction-quote span { color: var(--teal); }
+
+.conviction-pillars {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 10px;
+  position: relative;
+}
+@media(max-width:580px){ .conviction-pillars { grid-template-columns:1fr; } }
+
+.pillar {
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.1);
+  border-radius: 8px;
+  padding: 14px 14px 12px;
+}
+.pillar-icon { font-size: 20px; margin-bottom: 8px; display: block; }
+.pillar-title {
+  font-size: 12px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 4px;
+}
+.pillar-desc {
+  font-family: var(--body);
+  font-size: 11.5px;
+  color: rgba(255,255,255,.55);
+  line-height: 1.5;
+  font-weight: 300;
+}
+
+/* ── NOT REPLACE ─────────────────────────────────────────────── */
+.not-replace {
+  background: var(--card);
+  border: 1px solid rgba(0,74,173,.12);
+  border-left: 4px solid var(--blue);
+  border-radius: 0 10px 10px 0;
+  padding: 18px 22px;
+  margin-bottom: 24px;
+}
+.not-replace-label {
+  font-size: 9px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--blue);
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+.not-replace-text {
+  font-family: var(--body);
+  font-size: 13.5px;
+  color: var(--navy);
+  line-height: 1.65;
+  font-weight: 400;
+}
+.not-replace-text strong { font-weight: 600; }
+
+/* ── ECOSYSTEM ───────────────────────────────────────────────── */
+.ecosystem-strip {
+  border: 1.5px solid var(--gray-l);
+  border-radius: 12px;
+  padding: 22px 24px;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 20px;
+  align-items: center;
+  background: #fff;
+  margin-bottom: 24px;
+}
+@media(max-width:580px){ .ecosystem-strip { grid-template-columns:1fr; } }
+.eco-label {
+  font-size: 9px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--gray);
+  margin-bottom: 6px;
+}
+.eco-name {
+  font-size: 20px;
+  font-weight: 700;
+  background: linear-gradient(90deg,#f95bf6,#532cf9,#03f7eb);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.eco-sub { font-size: 11px; color: var(--gray); margin-top: 2px; letter-spacing: 1px; }
+.eco-modules {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.eco-mod {
+  border: 1px solid var(--gray-l);
+  border-radius: 6px;
+  padding: 8px 12px;
+}
+.eco-mod-name {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--navy);
+  margin-bottom: 2px;
+}
+.eco-mod-desc {
+  font-family: var(--body);
+  font-size: 10.5px;
+  color: var(--gray);
+  font-weight: 400;
+}
+
+/* ── Footer ──────────────────────────────────────────────────── */
+.footer {
+  margin-top: 48px;
+  padding-top: 20px;
+  border-top: 1.5px solid var(--navy);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.footer-brand {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: -.01em;
+}
+.footer-brand .gt {
+  background: var(--grad-t);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.footer-note {
+  font-size: 10px;
+  color: var(--gray);
+  letter-spacing: 1px;
+}
+
+/* ── Responsive · Tablet (768px) ─────────────────────────────── */
+@media (max-width: 768px) {
+  .page { padding: 0 20px 60px; }
+
+  /* Header — stack vertically */
+  .header {
+    grid-template-columns: 1fr;
+    padding: 36px 0 28px;
+    gap: 16px;
+  }
+  .header-badge { justify-self: start; }
+  .header-sub { max-width: 100%; }
+
+  /* Section spacing */
+  .section { margin-top: 40px; }
+  .section-intro { max-width: 100%; }
+
+  /* Context stats — 2 cols on tablet */
+  .context-grid { grid-template-columns: 1fr 1fr; }
+
+  /* Problem text block */
+  .problem-text { padding: 22px 24px; }
+  .problem-text p { font-size: 15px; }
+
+  /* Journey stages */
+  .stage-head {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+  .stage-badge { justify-self: start; }
+
+  /* Impact grid */
+  .impact-grid { grid-template-columns: 1fr 1fr; }
+
+  /* Conviction */
+  .conviction-block { padding: 28px 24px 24px; }
+  .conviction-pillars { grid-template-columns: 1fr 1fr; }
+
+  /* Ecosystem */
+  .ecosystem-strip {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+  .eco-modules { justify-content: flex-start; }
+
+  /* Footer */
+  .footer { flex-direction: column; align-items: flex-start; gap: 6px; }
+}
+
+/* ── Responsive · Mobile (480px) ─────────────────────────────── */
+@media (max-width: 480px) {
+  html { font-size: 14px; }
+  .page { padding: 0 16px 48px; }
+
+  /* Header */
+  .header { padding: 28px 0 20px; }
+  .header-kicker { font-size: 9px; letter-spacing: 4px; }
+  .header-kicker::before { width: 20px; }
+  .header-badge { font-size: 9px; padding: 6px 12px; }
+
+  /* Sections */
+  .section { margin-top: 32px; }
+  .sec-label { font-size: 8.5px; letter-spacing: 4px; }
+  .section-intro { font-size: 13px; }
+
+  /* Context stats — 1 col on mobile */
+  .context-grid { grid-template-columns: 1fr; }
+  .ctx-cell { padding: 18px 16px; }
+  .ctx-stat { font-size: 32px; }
+  .ctx-label { font-size: 12px; }
+
+  /* Problem text */
+  .problem-text { padding: 20px 18px; border-radius: 10px; }
+  .problem-text p { font-size: 14px; line-height: 1.6; }
+
+  /* Journey — tighter on mobile */
+  .journey::before { left: 18px; }
+  .journey-stage { padding-left: 50px; margin-bottom: 28px; }
+  .stage-node { left: 2px; width: 30px; height: 30px; font-size: 12px; }
+  .stage-card { border-radius: 10px; }
+
+  /* Stage head */
+  .stage-head { padding: 14px 14px 12px; }
+  .stage-tag { font-size: 8.5px; letter-spacing: 2px; }
+  .stage-name { font-size: 16px; }
+  .stage-ages { font-size: 11px; }
+  .stage-badge { font-size: 8px; padding: 4px 10px; letter-spacing: 1.5px; }
+
+  /* Stage body — always 1 col on mobile */
+  .stage-body { grid-template-columns: 1fr; }
+  .stage-col { padding: 14px 14px; }
+  .stage-col + .stage-col { border-left: none; border-top: 1px solid var(--card); }
+  .col-label { font-size: 8px; letter-spacing: 3px; margin-bottom: 10px; }
+  .col-list li { font-size: 12.5px; padding-left: 12px; }
+  .col-list li::before { width: 4px; height: 4px; top: 6px; }
+
+  /* Instrument chips row */
+  .instr-row { padding: 10px 14px; }
+  .instr-label-sm { font-size: 8px; letter-spacing: 2px; }
+  .chip { font-size: 9.5px; padding: 2px 8px; }
+
+  /* Mento callout inside stage */
+  .mento-callout { padding: 12px 14px; gap: 10px; }
+  .mento-icon { font-size: 16px; }
+  .mento-text { font-size: 11.5px; }
+
+  /* Impact grid — 1 col */
+  .impact-grid { grid-template-columns: 1fr; gap: 10px; }
+  .impact-card { padding: 16px 14px; }
+  .impact-num { font-size: 24px; }
+  .impact-title { font-size: 13px; }
+  .impact-desc { font-size: 12px; }
+
+  /* Conviction */
+  .conviction-block { padding: 22px 18px 20px; border-radius: 10px; }
+  .conviction-kicker { font-size: 8.5px; letter-spacing: 4px; }
+  .conviction-quote { font-size: 16px; line-height: 1.45; }
+  .conviction-pillars { grid-template-columns: 1fr; gap: 8px; }
+  .pillar { padding: 12px; }
+  .pillar-icon { font-size: 18px; margin-bottom: 6px; }
+  .pillar-title { font-size: 11px; }
+  .pillar-desc { font-size: 10.5px; }
+
+  /* Not replace */
+  .not-replace { padding: 14px 16px; }
+  .not-replace-label { font-size: 8px; letter-spacing: 3px; }
+  .not-replace-text { font-size: 12.5px; }
+
+  /* Ecosystem */
+  .ecosystem-strip { padding: 16px 16px; border-radius: 10px; }
+  .eco-name { font-size: 18px; }
+  .eco-modules { gap: 6px; }
+  .eco-mod { padding: 6px 10px; }
+  .eco-mod-name { font-size: 11px; }
+  .eco-mod-desc { font-size: 10px; }
+
+  /* Footer */
+  .footer { padding-top: 16px; margin-top: 36px; }
+  .footer-brand { font-size: 12px; }
+  .footer-note { font-size: 9px; }
+}
+
+/* ── Responsive · Small mobile (360px) ──────────────────────── */
+@media (max-width: 360px) {
+  .page { padding: 0 12px 40px; }
+  .header { padding: 22px 0 18px; }
+  .stage-name { font-size: 15px; }
+  .col-list li { font-size: 12px; }
+  .conviction-quote { font-size: 15px; }
+  .ctx-stat { font-size: 28px; }
+  .journey-stage { padding-left: 44px; }
+  .journey::before { left: 14px; }
+  .stage-node { width: 26px; height: 26px; font-size: 11px; }
+  .eco-modules { flex-direction: column; }
+}
+
+/* ── Print ───────────────────────────────────────────────────── */
+@media print {
+  body { background: #fff; }
+  .topbar { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .conviction-block, .problem-text {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+}
+</style>
+</head>
+<body>
+<div class="topbar"></div>
+
+<div class="page">
+
+  <!-- HEADER -->
+  <div class="header">
+    <div class="header-left">
+      <div class="header-kicker">Mento.IA · Documento pedagógico</div>
+      <h1 class="header-title">
+        El camino del alumno<br>
+        <span class="gt">de los 12 a los 18 años</span>
+      </h1>
+      <p class="header-sub">Cómo acompañamos el autoconocimiento, el bienestar emocional y la orientación vocacional a lo largo de toda la secundaria — para que la elección del futuro sea genuinamente suya.</p>
+    </div>
+    <div class="header-badge">Para docentes y familias</div>
+  </div>
+
+
+  <!-- ══ SECTION 1: EL CONTEXTO ══ -->
+  <div class="section">
+    <div class="sec-label">El contexto</div>
+    <h2 class="section-title">Seis años que no se pueden improvisar.</h2>
+    <p class="section-intro">La secundaria es el período más determinante en el desarrollo de la identidad. También es el más desatendido en términos de orientación real. Los datos son contundentes.</p>
+
+    <div class="context-grid">
+      <div class="ctx-cell">
+        <div class="ctx-stat gt">1 de 5</div>
+        <div class="ctx-label">universitarios cambia de carrera o abandona en el primer año — en su mayoría por falta de autoconocimiento vocacional previo.</div>
+        <div class="ctx-source">Fund. CYD · Sistema Universitario Español 2025</div>
+      </div>
+      <div class="ctx-cell">
+        <div class="ctx-stat" style="color:var(--s3)">16M</div>
+        <div class="ctx-label">de adolescentes en América Latina conviven con un problema de salud mental activo — ansiedad, depresión o trastorno del comportamiento.</div>
+        <div class="ctx-source">UNICEF · Análisis regional 2024</div>
+      </div>
+      <div class="ctx-cell">
+        <div class="ctx-stat" style="color:var(--s2)">+30%</div>
+        <div class="ctx-label">crecimiento de consultas por depresión y ansiedad en adolescentes argentinos entre 2023 y 2024, según el Hospital de Clínicas UBA.</div>
+        <div class="ctx-source">Hospital Clínicas UBA · Infobae 2025</div>
+      </div>
+    </div>
+
+    <div class="problem-text">
+      <p>La mayoría de los colegios aborda la orientación vocacional en los dos últimos años de secundaria — cuando la presión ya es máxima y el tiempo, mínimo. <strong>El resultado no es una elección. Es una reacción.</strong></p>
+      <p>Un alumno que llega a los 17 sin haberse preguntado quién es, qué le activa y qué quiere construir, toma decisiones de décadas en semanas. No porque sea imprudente — sino porque nadie le dio el espacio ni las herramientas para hacerlo antes.</p>
+      <p>Mento.IA existe porque <strong>el autoconocimiento necesita tiempo para construirse. Seis años, para ser precisos.</strong></p>
+    </div>
+  </div>
+
+
+  <!-- ══ SECTION 2: EL CAMINO ══ -->
+  <div class="section">
+    <div class="sec-label">El camino</div>
+    <h2 class="section-title">Tres etapas. Una sola persona.</h2>
+    <p class="section-intro">El programa no es una suma de actividades aisladas. Es un acompañamiento longitudinal que acumula datos, profundidad y confianza año a año. Cada etapa tiene un objetivo distinto — y construye sobre la anterior.</p>
+
+    <div class="journey">
+
+      <!-- ETAPA 1 -->
+      <div class="journey-stage s1">
+        <div class="stage-node s1">1</div>
+        <div class="stage-card">
+          <div class="stage-head">
+            <div>
+              <div class="stage-tag s1">Etapa 1 · Autoconocimiento</div>
+              <div class="stage-name">¿Quién soy?</div>
+              <div class="stage-ages">12 a 14 años · Años 1 y 2</div>
+            </div>
+            <div class="stage-badge s1">Fase de descubrimiento</div>
+          </div>
+          <div class="stage-body">
+            <div class="stage-col">
+              <div class="col-label">Lo que vive el alumno</div>
+              <ul class="col-list">
+                <li>Empieza la secundaria sin saber bien quién es fuera de la familia y el barrio</li>
+                <li>La presión de grupo es máxima — la identidad se construye por contraste con los pares</li>
+                <li>Las primeras crisis de autoestima y comparación aparecen en este período</li>
+                <li>Nadie le pregunta todavía qué quiere hacer — pero él ya lo está sintiendo</li>
+              </ul>
+            </div>
+            <div class="stage-col">
+              <div class="col-label">Lo que hace Mento.IA</div>
+              <ul class="col-list">
+                <li><strong>Le da nombre a lo que ya está.</strong> Sus fortalezas de carácter (VIA) existen antes de que las identifique — el instrumento las nombra.</li>
+                <li><strong>Le muestra cómo aprende.</strong> El estilo VARK conecta directamente con el rendimiento académico cotidiano.</li>
+                <li><strong>Abre la conversación emocional</strong> desde la autoconciencia y la empatía — sin diagnóstico, sin etiquetas.</li>
+                <li><strong>Siembra las primeras preguntas de propósito</strong> de forma liviana, sin presión de respuesta.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="instr-row s1">
+            <span class="instr-label-sm">Instrumentos</span>
+            <span class="chip new">VIA Fortalezas</span>
+            <span class="chip new">VARK Estilos de aprendizaje</span>
+            <span class="chip new">IE básica</span>
+            <span class="chip new">Propósito inicial</span>
+          </div>
+          <div class="mento-callout">
+            <div class="mento-icon">💡</div>
+            <div class="mento-text">
+              <strong>Impacto en la convivencia:</strong> cuando los alumnos conocen sus propias fortalezas y las de sus compañeros, la dinámica de grupo mejora. La comparación destructiva disminuye cuando el autoconocimiento reemplaza la mirada hacia afuera.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ETAPA 2 -->
+      <div class="journey-stage s2">
+        <div class="stage-node s2">2</div>
+        <div class="stage-card">
+          <div class="stage-head">
+            <div>
+              <div class="stage-tag s2">Etapa 2 · Perfil e intereses</div>
+              <div class="stage-name">¿Qué me activa?</div>
+              <div class="stage-ages">14 a 16 años · Años 3 y 4</div>
+            </div>
+            <div class="stage-badge s2">Fase de construcción</div>
+          </div>
+          <div class="stage-body">
+            <div class="stage-col">
+              <div class="col-label">Lo que vive el alumno</div>
+              <ul class="col-list">
+                <li>Las materias empiezan a diferenciarse — algunas le interesan genuinamente, otras no</li>
+                <li>La presión académica se intensifica y con ella la ansiedad ante el rendimiento</li>
+                <li>Aparecen las primeras comparaciones sobre "qué voy a estudiar" — sin datos reales</li>
+                <li>La elección de orientación media-superior se acerca y genera angustia anticipatoria</li>
+                <li>El bullying, la exclusión y la presión social alcanzan su pico en esta franja etaria</li>
+              </ul>
+            </div>
+            <div class="stage-col">
+              <div class="col-label">Lo que hace Mento.IA</div>
+              <ul class="col-list">
+                <li><strong>Mapea los intereses vocacionales</strong> con RIASEC — el modelo validado en 40 países que conecta intereses con entornos de trabajo reales.</li>
+                <li><strong>Completa el perfil de personalidad</strong> con Big Five — no para etiquetar, sino para entender en qué entornos el alumno florece.</li>
+                <li><strong>Desarrolla la inteligencia emocional</strong> completa — especialmente autorregulación y estrategias de afrontamiento ante la presión académica.</li>
+                <li><strong>Conecta el autoconocimiento con la elección de materias</strong> y actividades extracurriculares de forma concreta.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="instr-row s2">
+            <span class="instr-label-sm">Instrumentos</span>
+            <span class="chip new">RIASEC Intereses vocacionales</span>
+            <span class="chip new">Big Five Personalidad</span>
+            <span class="chip new">IE completa · 7 dimensiones</span>
+            <span class="chip">VIA avanzado</span>
+            <span class="chip new">Propósito completo</span>
+          </div>
+          <div class="mento-callout">
+            <div class="mento-icon">🛡️</div>
+            <div class="mento-text">
+              <strong>Impacto en el bienestar:</strong> el instrumento de IE en esta etapa incluye estrategias de afrontamiento (Coping Strategies) — el recurso más directamente vinculado a la reducción de ansiedad ante exámenes y situaciones de presión social. Un alumno que tiene vocabulario emocional y herramientas concretas maneja mejor las crisis.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ETAPA 3 -->
+      <div class="journey-stage s3">
+        <div class="stage-node s3">3</div>
+        <div class="stage-card">
+          <div class="stage-head">
+            <div>
+              <div class="stage-tag s3">Etapa 3 · Orientación y elección</div>
+              <div class="stage-name">¿Hacia dónde voy?</div>
+              <div class="stage-ages">16 a 18 años · Años 5 y 6</div>
+            </div>
+            <div class="stage-badge s3">Fase de lanzamiento</div>
+          </div>
+          <div class="stage-body">
+            <div class="stage-col">
+              <div class="col-label">Lo que vive el alumno</div>
+              <ul class="col-list">
+                <li>La presión familiar sobre "qué vas a estudiar" alcanza su punto máximo</li>
+                <li>La comparación con pares se vuelve competitiva — notas, universidades, becas</li>
+                <li>El miedo a elegir mal cierra puertas es paralizante para muchos</li>
+                <li>La ansiedad anticipatoria sobre el futuro convive con el duelo de terminar la secundaria</li>
+                <li>Muchos eligen lo que "parece bien" antes que lo que genuinamente quieren</li>
+              </ul>
+            </div>
+            <div class="stage-col">
+              <div class="col-label">Lo que hace Mento.IA</div>
+              <ul class="col-list">
+                <li><strong>Introduce las Anclas de Carrera</strong> (Schein/MIT) — los valores laborales no negociables que predicen satisfacción a largo plazo.</li>
+                <li><strong>Mide la Intencionalidad en la Elección</strong> — si la decisión vocacional es genuinamente suya o está siendo dirigida externamente.</li>
+                <li><strong>Produce un perfil integrado</strong> de 5 años de datos para fundamentar la elección con evidencia, no con intuición.</li>
+                <li><strong>Cierra con El Manifiesto</strong> — la síntesis personal en primera persona de quién es y hacia dónde va.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="instr-row s3">
+            <span class="instr-label-sm">Instrumentos</span>
+            <span class="chip new">Anclas de Carrera · Schein/MIT</span>
+            <span class="chip new">Intencionalidad en la Elección</span>
+            <span class="chip">RIASEC 3.ª medición</span>
+            <span class="chip new">El Manifiesto</span>
+          </div>
+          <div class="mento-callout">
+            <div class="mento-icon">🧭</div>
+            <div class="mento-text">
+              <strong>Impacto en la orientación:</strong> un alumno que llega a los 17 con cuatro años de datos sobre sí mismo no necesita decidir en semanas qué hará el resto de su vida. Ya sabe quién es. La elección se convierte en confirmación, no en apuesta.
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /journey -->
+  </div>
+
+
+  <!-- ══ SECTION 3: IMPACTO CONCRETO ══ -->
+  <div class="section">
+    <div class="sec-label">Impacto concreto</div>
+    <h2 class="section-title">Lo que cambia cuando hay acompañamiento longitudinal.</h2>
+    <p class="section-intro">No es solo orientación vocacional. Es la diferencia que hace el autoconocimiento acumulado en la vida cotidiana del alumno durante seis años.</p>
+
+    <div class="impact-grid">
+      <div class="impact-card">
+        <div class="impact-num">‒50%</div>
+        <div class="impact-title">Carga del departamento de orientación</div>
+        <div class="impact-desc">Validado en piloto. Cuando el alumno llega a la sesión con el orientador ya habiendo hecho el trabajo de autoconocimiento, la conversación es más profunda y más breve.</div>
+      </div>
+      <div class="impact-card b">
+        <div class="impact-num">+70%</div>
+        <div class="impact-title">Alineación vocacional al terminar el programa</div>
+        <div class="impact-desc">Los alumnos que completan el programa de 6 años reportan mayor claridad y convicción en su elección de carrera respecto a grupos control.</div>
+      </div>
+      <div class="impact-card n">
+        <div class="impact-num">0</div>
+        <div class="impact-title">Carga adicional para el docente</div>
+        <div class="impact-desc">El programa es autoadministrado por el alumno en 25–45 minutos anuales. Los reportes se generan automáticamente. El docente acompaña — no administra.</div>
+      </div>
+      <div class="impact-card t2">
+        <div class="impact-num">Antes</div>
+        <div class="impact-title">La orientación llega cuando ya es tarde</div>
+        <div class="impact-desc">La orientación vocacional tradicional aparece en los últimos dos años, cuando la presión es máxima y el tiempo, mínimo. Mento.IA empieza a los 12 — cuando todavía hay espacio para explorar sin urgencia.</div>
+      </div>
+    </div>
+
+    <div class="conviction-block">
+      <div class="conviction-kicker">La convicción detrás del programa</div>
+      <div class="conviction-quote">
+        La ansiedad vocacional no se resuelve con más información sobre carreras.<br>
+        Se resuelve con <span>más información sobre uno mismo</span> — acumulada con tiempo.
+      </div>
+      <div class="conviction-pillars">
+        <div class="pillar">
+          <span class="pillar-icon">🧠</span>
+          <div class="pillar-title">Autoconocimiento reduce ansiedad</div>
+          <div class="pillar-desc">Un alumno que puede nombrar quién es no necesita buscarse a sí mismo en la presión de elegir una carrera.</div>
+        </div>
+        <div class="pillar">
+          <span class="pillar-icon">🤝</span>
+          <div class="pillar-title">IE mejora la convivencia</div>
+          <div class="pillar-desc">Los instrumentos de inteligencia emocional tienen impacto directo en la regulación del conflicto, la empatía y el clima de aula.</div>
+        </div>
+        <div class="pillar">
+          <span class="pillar-icon">🎯</span>
+          <div class="pillar-title">Datos acumulados = elección sólida</div>
+          <div class="pillar-desc">Cinco años de perfil psicométrico convierten la elección vocacional en una confirmación fundamentada, no en una apuesta.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ══ SECTION 4: LO QUE MENTO NO ES ══ -->
+  <div class="section">
+    <div class="sec-label">Lo que Mento.IA no reemplaza</div>
+    <h2 class="section-title">Un ecosistema, no una solución única.</h2>
+
+    <div class="not-replace">
+      <div class="not-replace-label">Posición clara</div>
+      <div class="not-replace-text">
+        Mento.IA <strong>no reemplaza al orientador vocacional, al psicólogo escolar ni al tutor.</strong> Los potencia. El reporte anual que recibe el alumno es la materia prima para una conversación de calidad con cualquiera de ellos. Un orientador con datos psicométricos de cinco años puede ir al núcleo del alumno en una sesión, en lugar de empezar desde cero.<br><br>
+        Tampoco es una herramienta de diagnóstico clínico. Ningún instrumento del programa emite diagnósticos ni etiquetas: detecta señales y orienta, siempre dentro de los límites éticos del ámbito educativo. Los resultados son siempre del alumno — nunca de la institución sin su consentimiento.
+      </div>
+    </div>
+
+    <!-- Ecosystem -->
+    <div class="ecosystem-strip">
+      <div>
+        <div class="eco-label">Parte del ecosistema</div>
+        <div class="eco-name">MY PATH.IA</div>
+        <div class="eco-sub">Build your tomorrow.</div>
+      </div>
+      <div class="eco-modules">
+        <div class="eco-mod">
+          <div class="eco-mod-name" style="color:var(--teal)">Mento.IA</div>
+          <div class="eco-mod-desc">Orientación vocacional</div>
+        </div>
+        <div class="eco-mod">
+          <div class="eco-mod-name" style="color:var(--s2)">My.Uni</div>
+          <div class="eco-mod-desc">Buscador universitario</div>
+        </div>
+        <div class="eco-mod">
+          <div class="eco-mod-name" style="color:var(--s1)">My.Well</div>
+          <div class="eco-mod-desc">Bienestar integral</div>
+        </div>
+        <div class="eco-mod">
+          <div class="eco-mod-name" style="color:var(--gray)">LINNO</div>
+          <div class="eco-mod-desc">Conexión con profesionales</div>
+        </div>
+      </div>
+    </div>
+
+    <p style="font-family:var(--body);font-size:13px;color:var(--gray);line-height:1.65;font-weight:400;">
+      El perfil que Mento.IA construye en seis años es el mismo que alimenta My.Uni en el momento de elegir universidad — cruzando intereses, personalidad y fortalezas con más de 7.000 programas en 20 países. Algo imposible de hacer con herramientas desconectadas.
+    </p>
+  </div>
+
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <div class="footer-brand"><span class="gt">Mento.IA</span> · Parte del ecosistema MY PATH.IA</div>
+    <div class="footer-note">Focused on your future · mypath.ia</div>
+  </div>
+
+</div><!-- /page -->
+</body>
+</html>
