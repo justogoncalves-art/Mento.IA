@@ -230,25 +230,26 @@
       if (!form.checkValidity()) { form.reportValidity(); return; }
       // Static prototype: deliver via the user's mail client to hola@mypathia.com
       var get = function (n) { var el = form.elements[n]; return el ? el.value.trim() : ""; };
-      var nombre = get("nombre"), apellido = get("apellido"), colegio = get("colegio"),
-          cargo = get("cargo"), pais = get("pais"), motivo = get("motivo");
+      var nombre = get("nombre"), apellido = get("apellido"), email = get("email"), telefono = get("telefono"),
+          colegio = get("colegio"), cargo = get("cargo"), pais = get("pais"), motivo = get("motivo");
       var plataforma = get("plataforma") || "Mento.IA";
       var lang = document.documentElement.getAttribute("lang") || "es";
       var L = {
         es: { subj: "Solicitud de demo · Mento.IA", intro: "Nueva solicitud de demo desde la web de Mento.IA:",
-              nombre: "Nombre", apellido: "Apellido", colegio: "Colegio / institución", cargo: "Cargo", pais: "País", motivo: "Motivo", none: "(no indicado)" },
+              nombre: "Nombre", apellido: "Apellido", email: "Correo electrónico", telefono: "Teléfono", colegio: "Institución", cargo: "Cargo", pais: "País", motivo: "Motivo", none: "(no indicado)" },
         en: { subj: "Demo request · Mento.IA", intro: "New demo request from the Mento.IA website:",
-              nombre: "First name", apellido: "Last name", colegio: "School / institution", cargo: "Role", pais: "Country", motivo: "Reason", none: "(not provided)" },
+              nombre: "First name", apellido: "Last name", email: "Email", telefono: "Phone", colegio: "Institution", cargo: "Role", pais: "Country", motivo: "Reason", none: "(not provided)" },
         pt: { subj: "Pedido de demo · Mento.IA", intro: "Novo pedido de demo a partir do site da Mento.IA:",
-              nombre: "Nome", apellido: "Apelido", colegio: "Escola / instituição", cargo: "Cargo", pais: "País", motivo: "Motivo", none: "(não indicado)" }
+              nombre: "Nome", apellido: "Apelido", email: "E-mail", telefono: "Telefone", colegio: "Instituição", cargo: "Cargo", pais: "País", motivo: "Motivo", none: "(não indicado)" }
       }[lang] || null;
-      var t = L || { subj: "Solicitud de demo · Mento.IA", intro: "Nueva solicitud de demo:", nombre: "Nombre", apellido: "Apellido", colegio: "Colegio / institución", cargo: "Cargo", pais: "País", motivo: "Motivo", none: "(no indicado)" };
+      var t = L || { subj: "Solicitud de demo · Mento.IA", intro: "Nueva solicitud de demo:", nombre: "Nombre", apellido: "Apellido", email: "Correo electrónico", telefono: "Teléfono", colegio: "Institución", cargo: "Cargo", pais: "País", motivo: "Motivo", none: "(no indicado)" };
       var endpoint = window.MENTO_FORM_ENDPOINT || "";
       if (endpoint) {
         // Send to Google Sheets via Apps Script web app
         var params = new URLSearchParams({
           plataforma: plataforma,
-          nombre: nombre, apellido: apellido, colegio: colegio, cargo: cargo,
+          nombre: nombre, apellido: apellido, email: email, telefono: telefono,
+          colegio: colegio, cargo: cargo,
           pais: pais, motivo: motivo, lang: lang, fecha: new Date().toISOString()
         });
         fetch(endpoint, {
@@ -265,6 +266,8 @@
         "Plataforma: " + plataforma + "\n" +
         t.nombre + ": " + nombre + "\n" +
         t.apellido + ": " + apellido + "\n" +
+        t.email + ": " + email + "\n" +
+        t.telefono + ": " + (telefono || t.none) + "\n" +
         t.colegio + ": " + colegio + "\n" +
         t.cargo + ": " + cargo + "\n" +
         t.pais + ": " + (pais || t.none) + "\n" +
