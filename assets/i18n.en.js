@@ -93,6 +93,6 @@ window.MENTO_I18N.en = {
 
   "form.eyebrow":"Request demo","form.title":"See Mento.IA at your institution","form.sub":"Tell us a little about you and we'll walk you through the full journey with real data.",
   "form.plataforma":"Platform","form.nombre":"First name","form.apellido":"Last name","form.email":"Email","form.telefono":"Phone","form.opt":"(optional)","form.colegio":"Institution","form.cargo":"Role","form.pais":"Country","form.motivo":"Reason",
-  "form.motivoph":"Select an option","form.motivo1":"I want a free demo","form.motivo2":"I want more information","form.motivo3":"I want to assess it for my institution",
+  "form.motivoph":"Select an option","form.motivo1":"I'm interested for my institution","form.motivo2":"I'm an independent professional and I'm interested","form.motivo3":"I'm an independent user and I want to take a test","form.motivo4":"I want to know the pricing",
   "form.submit":"Request demo","form.okt":"Done!","form.okd":"Someone from the team will reach out within 24 hours :)"
 };

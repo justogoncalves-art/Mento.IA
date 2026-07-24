@@ -93,6 +93,6 @@ window.MENTO_I18N.pt = {
 
   "form.eyebrow":"Solicitar demo","form.title":"Conheça a Mento.IA na sua instituição","form.sub":"Conte-nos um pouco sobre si e mostramos-lhe o percurso completo com dados reais.",
   "form.plataforma":"Plataforma","form.nombre":"Nome","form.apellido":"Apelido","form.email":"E-mail","form.telefono":"Telefone","form.opt":"(opcional)","form.colegio":"Instituição","form.cargo":"Cargo","form.pais":"País","form.motivo":"Motivo",
-  "form.motivoph":"Selecione uma opção","form.motivo1":"Quero uma demo grátis","form.motivo2":"Quero mais informação","form.motivo3":"Quero avaliar a viabilidade para a minha instituição",
+  "form.motivoph":"Selecione uma opção","form.motivo1":"Tenho interesse para a minha instituição","form.motivo2":"Sou profissional independente e tenho interesse","form.motivo3":"Sou um utilizador independente e quero fazer um teste","form.motivo4":"Quero saber os custos",
   "form.submit":"Solicitar demo","form.okt":"Pronto!","form.okd":"Em menos de 24 h alguém da equipa entrará em contacto consigo :)"
 };
