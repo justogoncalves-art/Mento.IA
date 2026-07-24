@@ -1,0 +1,30 @@
+/* ============================================================
+   Mento.IA · Shadows, borders & motion
+   Restrained, soft shadows. Signature 2px gradient accent rule.
+   ============================================================ */
+:root {
+  /* ---- Shadows (soft, cool-tinted) ---- */
+  --shadow-xs: 0 1px 2px rgba(7,66,146,0.06);
+  --shadow-sm: 0 2px 8px rgba(7,66,146,0.06);
+  --shadow-md: 0 6px 20px rgba(7,66,146,0.08);
+  --shadow-lg: 0 16px 40px rgba(7,66,146,0.12);
+  --shadow-focus: 0 0 0 3px var(--mi-focus-ring);
+
+  /* ---- Borders ---- */
+  --border-width: 1px;         /* @kind other */
+  --border-width-strong: 1.5px; /* @kind other */
+  --accent-rule-height: 2px;   /* @kind other */
+
+  /* ---- Motion durations ---- */
+  --dur-instant: 80ms;   /* @kind other */
+  --dur-fast: 150ms;     /* @kind other */
+  --dur-default: 200ms;  /* @kind other */
+  --dur-medium: 300ms;   /* @kind other */
+  --dur-slow: 500ms;     /* @kind other */
+  --dur-xslow: 800ms;    /* @kind other */
+
+  /* ---- Motion easing ---- */
+  --ease-primary: cubic-bezier(0.16, 1, 0.3, 1);   /* @kind other */
+  --ease-exit: cubic-bezier(0.4, 0, 1, 1);         /* @kind other */
+  --ease-press: cubic-bezier(0.34, 1.56, 0.64, 1); /* @kind other */
+}

@@ -53,8 +53,8 @@
   function initLang() {
     var saved;
     try { saved = localStorage.getItem("mento.lang"); } catch (e) {}
-    // Default language: English (unless the visitor already chose one)
-    var lang = saved || "en";
+    // Default language: Spanish (unless the visitor already chose one)
+    var lang = saved || "es";
     document.querySelectorAll(".lang button").forEach(function (b) {
       b.addEventListener("click", function () { applyLang(b.dataset.lang); });
     });

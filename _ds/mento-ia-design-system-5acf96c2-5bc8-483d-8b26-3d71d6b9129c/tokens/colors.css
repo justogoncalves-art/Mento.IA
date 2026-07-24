@@ -1,0 +1,58 @@
+/* ============================================================
+   Mento.IA · Color tokens
+   Azul Intenso is the primary brand color for all text & solid
+   surfaces. The gradient is decorative-only (three uses — see
+   readme). Cyan is NEVER a text color on light (1.6:1 fail).
+   ============================================================ */
+:root {
+  /* ---- Core palette (base) ---- */
+  --mi-azul: #074292;          /* Azul Intenso — primary brand */
+  --mi-navy: #0043ad;          /* Navy — gradient end / deep accent */
+  --mi-cyan: #0de0e6;          /* Cyan — gradient start, decorative only */
+  --mi-spa: #4d6a73;           /* Spa Day — secondary text */
+  --mi-ink: #151111;           /* Deep chocolate — body text */
+  --mi-gris: #fafafa;          /* Gris claro — app background */
+  --mi-white: #ffffff;
+
+  /* ---- Functional neutrals ---- */
+  --mi-border: #e4e9ef;        /* card borders, dividers, inputs */
+  --mi-muted: #8fa5b0;         /* placeholder, disabled, metadata */
+
+  /* ---- Semantic status ---- */
+  --mi-success: #2d8270;       /* confirmed / active (teal family) */
+  --mi-warning: #b45309;       /* pending / onboarding */
+  --mi-error: #c0392b;         /* error */
+  --mi-info: var(--mi-azul);   /* info */
+
+  /* ---- Signature gradient (90°) — decorative only ---- */
+  --mi-gradient: linear-gradient(90deg, #0de0e6, #0043ad);   /* @kind color */
+  --mi-gradient-v: linear-gradient(180deg, #0de0e6, #0043ad); /* @kind color */
+
+  /* ---- rgba helpers for dark (Azul) surfaces ---- */
+  --mi-on-azul-1: rgba(255,255,255,0.80);  /* strong text on azul */
+  --mi-on-azul-2: rgba(255,255,255,0.40);  /* body text on azul */
+  --mi-on-azul-3: rgba(255,255,255,0.22);  /* eyebrow / faint labels */
+  --mi-on-azul-border: rgba(255,255,255,0.10);
+  --mi-on-azul-divider: rgba(255,255,255,0.07);
+  --mi-focus-ring: rgba(13,224,230,0.10);  /* cyan focus ring, 3px */
+
+  /* ============================================================
+     Semantic aliases — reference these in components
+     ============================================================ */
+  --text-heading: var(--mi-azul);
+  --text-body: var(--mi-ink);
+  --text-secondary: var(--mi-spa);
+  --text-muted: var(--mi-muted);
+  --text-on-dark: var(--mi-white);
+
+  --surface-page: var(--mi-gris);
+  --surface-card: var(--mi-white);
+  --surface-inset: var(--mi-gris);
+  --surface-dark: var(--mi-azul);
+
+  --border-default: var(--mi-border);
+  --border-strong: rgba(7,66,146,0.20);
+
+  --accent: var(--mi-gradient);
+  --brand-primary: var(--mi-azul);
+}
