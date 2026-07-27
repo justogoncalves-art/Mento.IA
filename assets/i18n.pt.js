@@ -73,6 +73,18 @@ window.MENTO_I18N.pt = {
   "rep.r3t":"O profissional","rep.r3d":"Dados acionáveis, contexto longitudinal e alertas precoces. Toda a informação para uma conversa que importa.",
   "rep.r3g1":"Psicometria","rep.r3g2":"Histórico","rep.r3g3":"Alertas",
 
+  "sys.eyebrow":"Como funciona","sys.h2a":"Da implementação","sys.h2hl":"ao ecossistema.",
+  "sys.lead":"Um circuito chave na mão dentro da Mento.IA, conectado com o resto das plataformas da MyPath.IA.",
+  "sys.tab1":"Implementação","sys.tab2":"Ecossistema MyPath.IA",
+  "sys.i1dur":"Sem carga para o colégio","sys.i1t":"Início","sys.i1d":"A implementação é 100% da Mento.IA. O colégio não faz nada: apenas compartilha os dados dos alunos e nós cuidamos do resto.",
+  "sys.i2dur":"Duração · 5 horas","sys.i2t":"O caminho","sys.i2d":"O aluno começa o programa correspondente ao seu ano escolar, com um percurso guiado de aproximadamente 5 horas.",
+  "sys.i3dur":"+20 funcionalidades","sys.i3t":"Relatório","sys.i3d":"Concluído o programa, o docente gera os relatórios de cada aluno sem intervenção da Mento.IA, com mais de 20 funcionalidades à disposição de docentes e coordenadores.",
+  "sys.i4dur":"Acesso o ano todo","sys.i4t":"Sem limites","sys.i4d":"O aluno tem seu relatório digital no seu usuário. Nos dois últimos anos, além disso, obtém acesso ilimitado ao My Campus.IA —o buscador universitário mais potente do mundo— durante todo o ano.",
+  "sys.ecoa":"Mento.IA é a ponte entre","sys.ecohl":"a etapa escolar e o futuro.","sys.enow":"Você está aqui",
+  "sys.e1age":"6–12 anos","sys.e1t":"My.Wellness","sys.e1d":"Programa de detecção e acompanhamento psicológico e neurológico.",
+  "sys.e2age":"12–18 anos","sys.e2t":"Mento.IA","sys.e2d":"Orientação vocacional longitudinal ao longo de toda a etapa escolar.",
+  "sys.e3age":"17–18+ anos","sys.e3t":"My Campus.IA","sys.e3d":"Decisão universitária e plano de futuro com o buscador global de carreiras.",
+
   "tru.eyebrow":"Confiam em nós","tru.h2a":"Instituições","tru.h2hl":"que já avançam.",
   "tru.s1n":"12+","tru.s1l":"colégios e instituições","tru.s2n":"8+","tru.s2l":"países representados",
   "tru.s3n":"2.000+","tru.s3l":"pessoas em acompanhamento","tru.s4n":"+5","tru.s4l":"idiomas nativos do programa",

@@ -73,6 +73,18 @@ window.MENTO_I18N.en = {
   "rep.r3t":"The professional","rep.r3d":"Actionable data, longitudinal context and early flags. All the information for a conversation that matters.",
   "rep.r3g1":"Psychometrics","rep.r3g2":"History","rep.r3g3":"Flags",
 
+  "sys.eyebrow":"How it works","sys.h2a":"From implementation","sys.h2hl":"to the ecosystem.",
+  "sys.lead":"A turnkey circuit inside Mento.IA, connected to the rest of the MyPath.IA platforms.",
+  "sys.tab1":"Implementation","sys.tab2":"MyPath.IA ecosystem",
+  "sys.i1dur":"Zero load for the school","sys.i1t":"Start","sys.i1d":"Implementation is 100% on Mento.IA. The school does nothing: it just shares student data and we handle the rest.",
+  "sys.i2dur":"Duration · 5 hours","sys.i2t":"The path","sys.i2d":"The student begins the program matching their school year, with a guided journey of about 5 hours.",
+  "sys.i3dur":"+20 features","sys.i3t":"Report","sys.i3d":"Once the program ends, teachers generate each student's reports without any Mento.IA intervention, with over 20 features available to teachers and coordinators.",
+  "sys.i4dur":"Access all year","sys.i4t":"No limits","sys.i4d":"Students keep their digital report in their account. In the final two years they also get unlimited access to My Campus.IA —the world's most powerful university search— all year long.",
+  "sys.ecoa":"Mento.IA is the bridge between","sys.ecohl":"school and the future.","sys.enow":"You are here",
+  "sys.e1age":"6–12 years","sys.e1t":"My.Wellness","sys.e1d":"Psychological and neurological screening and support program.",
+  "sys.e2age":"12–18 years","sys.e2t":"Mento.IA","sys.e2d":"Longitudinal vocational guidance across the whole school stage.",
+  "sys.e3age":"17–18+ years","sys.e3t":"My Campus.IA","sys.e3d":"University decision and future plan with the global career search engine.",
+
   "tru.eyebrow":"Trusted by","tru.h2a":"Institutions","tru.h2hl":"already moving forward.",
   "tru.s1n":"12+","tru.s1l":"schools and institutions","tru.s2n":"8+","tru.s2l":"countries represented",
   "tru.s3n":"2,000+","tru.s3l":"people being followed","tru.s4n":"+5","tru.s4l":"native program languages",

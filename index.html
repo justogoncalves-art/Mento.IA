@@ -9,7 +9,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Quicksand:wght@400;500;600;700&family=DM+Mono:wght@400;500&family=Sora:wght@500;600;700&family=Nunito+Sans:opsz,wght@6..12,400;6..12,500;6..12,600&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="_ds/mento-ia-design-system-5acf96c2-5bc8-483d-8b26-3d71d6b9129c/tokens/colors.css" />
 <link rel="stylesheet" href="_ds/mento-ia-design-system-5acf96c2-5bc8-483d-8b26-3d71d6b9129c/tokens/effects.css" />
-<link rel="stylesheet" href="assets/mento-web.css?v=9" />
+<link rel="stylesheet" href="assets/mento-web.css?v=10" />
 </head>
 <body>
 <template id="__bundler_thumbnail" data-bg-color="#074292">
@@ -293,11 +293,92 @@
   </div>
 </section>
 
+<!-- ===================== SISTEMA (Implementación / Ecosistema) ===================== -->
+<section class="section" id="sistema" style="background:var(--gris)" data-screen-label="Sistema">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow"><i class="sx">06</i><span data-i18n="sys.eyebrow">Cómo funciona</span></span>
+      <h2 class="d2"><span data-i18n="sys.h2a">De la implementación</span> <span class="hl" data-i18n="sys.h2hl">al ecosistema.</span></h2>
+      <p class="lead" style="margin-inline:auto" data-i18n="sys.lead">Un circuito llave en mano dentro de Mento.IA, conectado con el resto de plataformas de MyPath.IA.</p>
+    </div>
+    <div class="sys-tabs reveal" role="tablist">
+      <button type="button" class="sys-tab is-active" data-systab="impl" role="tab" aria-selected="true" data-i18n="sys.tab1">Implementación</button>
+      <button type="button" class="sys-tab" data-systab="eco" role="tab" aria-selected="false" data-i18n="sys.tab2">Ecosistema MyPath.IA</button>
+    </div>
+
+    <!-- Panel: Implementación -->
+    <div class="sys-panel is-active" data-syspanel="impl">
+      <div class="timeline reveal">
+        <div class="tl-track" aria-hidden="true"></div>
+        <div class="tl-step">
+          <div class="tl-node"><span>1</span></div>
+          <div class="tl-body">
+            <span class="tl-dur" data-i18n="sys.i1dur">Sin carga para el colegio</span>
+            <h4 data-i18n="sys.i1t">Inicio</h4>
+            <p data-i18n="sys.i1d">La implementación es 100% de Mento.IA. El colegio no hace nada: solo comparte los datos de los alumnos y nosotros nos encargamos del resto.</p>
+          </div>
+        </div>
+        <div class="tl-step">
+          <div class="tl-node"><span>2</span></div>
+          <div class="tl-body">
+            <span class="tl-dur" data-i18n="sys.i2dur">Duración · 5 horas</span>
+            <h4 data-i18n="sys.i2t">El camino</h4>
+            <p data-i18n="sys.i2d">El alumno comienza el programa que corresponde a su año escolar, con un recorrido guiado de aproximadamente 5 horas.</p>
+          </div>
+        </div>
+        <div class="tl-step">
+          <div class="tl-node"><span>3</span></div>
+          <div class="tl-body">
+            <span class="tl-dur" data-i18n="sys.i3dur">+20 funcionalidades</span>
+            <h4 data-i18n="sys.i3t">Reporte</h4>
+            <p data-i18n="sys.i3d">Finalizado el programa, el docente genera los reportes de cada alumno sin intervención de Mento.IA, con más de 20 funcionalidades a disposición de docentes y coordinadores.</p>
+          </div>
+        </div>
+        <div class="tl-step">
+          <div class="tl-node"><span>4</span></div>
+          <div class="tl-body">
+            <span class="tl-dur" data-i18n="sys.i4dur">Acceso todo el año</span>
+            <h4 data-i18n="sys.i4t">Sin límites</h4>
+            <p data-i18n="sys.i4d">El alumno tiene su reporte digital en su usuario. En los dos últimos años, además, obtiene acceso ilimitado a My Campus.IA —el buscador universitario más potente del mundo— durante todo el año.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Panel: Ecosistema -->
+    <div class="sys-panel" data-syspanel="eco">
+      <div class="eco-head reveal">
+        <h3 class="eco-title"><span data-i18n="sys.ecoa">Mento.IA es el nexo entre</span> <span class="hl" data-i18n="sys.ecohl">la etapa escolar y el futuro.</span></h3>
+      </div>
+      <div class="eco-flow reveal">
+        <article class="eco-card">
+          <span class="eco-age" data-i18n="sys.e1age">6–12 años</span>
+          <h4 data-i18n="sys.e1t">My.Wellness</h4>
+          <p data-i18n="sys.e1d">Programa de detección y acompañamiento psicológico y neurológico.</p>
+        </article>
+        <span class="eco-arrow" aria-hidden="true">→</span>
+        <article class="eco-card is-current">
+          <span class="eco-badge" data-i18n="sys.enow">Estás aquí</span>
+          <span class="eco-age" data-i18n="sys.e2age">12–18 años</span>
+          <h4 data-i18n="sys.e2t">Mento.IA</h4>
+          <p data-i18n="sys.e2d">Orientación vocacional longitudinal a lo largo de toda la etapa escolar.</p>
+        </article>
+        <span class="eco-arrow" aria-hidden="true">→</span>
+        <article class="eco-card">
+          <span class="eco-age" data-i18n="sys.e3age">17–18+ años</span>
+          <h4 data-i18n="sys.e3t">My Campus.IA</h4>
+          <p data-i18n="sys.e3d">Decisión universitaria y plan de futuro con el buscador global de carreras.</p>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ===================== CONFIANZA ===================== -->
 <section class="section" id="confianza" style="background:var(--white)" data-screen-label="Confianza">
   <div class="wrap">
     <div class="sec-head reveal">
-      <span class="eyebrow"><i class="sx">06</i><span data-i18n="tru.eyebrow">Confían en nosotros</span></span>
+      <span class="eyebrow"><i class="sx">07</i><span data-i18n="tru.eyebrow">Confían en nosotros</span></span>
       <h2 class="d2"><span data-i18n="tru.h2a">Instituciones</span> <span class="hl" data-i18n="tru.h2hl">que ya avanzan.</span></h2>
     </div>
     <div class="trust-stats reveal">
@@ -431,9 +512,23 @@
 <script>
 window.MENTO_FORM_ENDPOINT = "https://script.google.com/macros/s/AKfycbyDLpiF5FUXrZ2aj5ZgsKrJBwu8873N-y_xE9_LNJm6OkemJN8_DVZ-n4LXk_Uoe6lQ/exec";
 </script>
-<script src="assets/i18n.es.js?v=r1"></script>
-<script src="assets/i18n.en.js?v=r1"></script>
-<script src="assets/i18n.pt.js?v=r1"></script>
+<script src="assets/i18n.es.js?v=r2"></script>
+<script src="assets/i18n.en.js?v=r2"></script>
+<script src="assets/i18n.pt.js?v=r2"></script>
 <script src="assets/app.js?v=r1"></script>
+<script>
+(function(){
+  var tabs=document.querySelectorAll('.sys-tab');
+  tabs.forEach(function(t){t.addEventListener('click',function(){
+    var key=t.getAttribute('data-systab');
+    tabs.forEach(function(x){var on=x===t;x.classList.toggle('is-active',on);x.setAttribute('aria-selected',on?'true':'false');});
+    document.querySelectorAll('.sys-panel').forEach(function(p){
+      var on=p.getAttribute('data-syspanel')===key;
+      p.classList.toggle('is-active',on);
+      if(on)p.querySelectorAll('.reveal').forEach(function(r){r.classList.add('in');});
+    });
+  });});
+})();
+</script>
 </body>
 </html>
