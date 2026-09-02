@@ -7,7 +7,7 @@ window.MENTO_I18N.en = {
   "hero.s1":"The future isn't decided","hero.s2":"in one afternoon.","hero.s3":"It's guided over six years.",
   "hero.sub":"Mento.IA is the vocational-guidance program that walks alongside each person through all of secondary school — and gives the professional back the time to truly guide.",
   "hero.cta1":"Request a demo","hero.cta2":"See how it works",
-  "hero.m1n":"5 hrs","hero.m1l":"Duration of each yearly program","hero.m2n":"100%","hero.m2l":"Mento.IA implementation","hero.m3n":"0%","hero.m3l":"Extra load on the professional","hero.m4n":"+2,000 hrs","hero.m4l":"Saved yearly per professional",
+  "hero.m1n":"1 hr","hero.m1l":"Duration of each yearly program","hero.m2n":"100%","hero.m2l":"Mento.IA implementation","hero.m3n":"0%","hero.m3l":"Extra load on the professional","hero.m4n":"+2,000 hrs","hero.m4l":"Saved yearly per professional",
   "hero.v1":"12 · Self-awareness","hero.v2":"15 · Guidance","hero.v3":"18 · Decision","hero.scroll":"Scroll",
 
   "mq.1":"Self-awareness first","mq.2":"Vocational guidance","mq.3":"Six years of guidance","mq.4":"AI with judgement","mq.5":"Families & institutions","mq.6":"Focused on your future",
@@ -77,7 +77,7 @@ window.MENTO_I18N.en = {
   "sys.lead":"A turnkey circuit inside Mento.IA, connected to the rest of the MyPath.IA platforms.",
   "sys.tab1":"Implementation","sys.tab2":"MyPath.IA ecosystem",
   "sys.i1dur":"Zero load for the school","sys.i1t":"Start","sys.i1d":"Implementation is 100% on Mento.IA. The school does nothing: it just shares student data and we handle the rest.",
-  "sys.i2dur":"Duration · 5 hours","sys.i2t":"The path","sys.i2d":"The student begins the program matching their school year, with a guided journey of about 5 hours.",
+  "sys.i2dur":"Duration · 1 hour","sys.i2t":"The path","sys.i2d":"The student begins the program matching their school year, with a guided journey of about 1 hour.",
   "sys.i3dur":"+20 features","sys.i3t":"Report","sys.i3d":"Once the program ends, teachers generate each student's reports without any Mento.IA intervention, with over 20 features available to teachers and coordinators.",
   "sys.i4dur":"Access all year","sys.i4t":"No limits","sys.i4d":"Students keep their digital report in their account. In the final two years they also get unlimited access to My Campus.IA —the world's most powerful university search— all year long.",
   "sys.ecoa":"Mento.IA is the bridge between","sys.ecohl":"school and the future.","sys.enow":"You are here",
@@ -87,7 +87,7 @@ window.MENTO_I18N.en = {
 
   "tru.eyebrow":"Trusted by","tru.h2a":"Institutions","tru.h2hl":"already moving forward.",
   "tru.s1n":"12+","tru.s1l":"schools and institutions","tru.s2n":"8+","tru.s2l":"countries represented",
-  "tru.s3n":"2,000+","tru.s3l":"people being followed","tru.s4n":"+5","tru.s4l":"native program languages",
+  "tru.s3n":"2,000+","tru.s3l":"people being followed","tru.s4n":"+7","tru.s4l":"native program languages",
   "tru.q1":"The experience was very positive. They highlighted the impact on defining vocational direction and the university-options module.","tru.q1by":"Diego Rubiolo","tru.q1role":"Director · Mar del Plata Day School",
   "tru.q2":"A key tool in the career-choice process. The guidance team halved the time spent preparing reports.","tru.q2by":"Salesian Network","tru.q2role":"Spain · Argentina · Chile",
   "tru.q3":"I love it because it's interactive, visually appealing and very easy to understand and use.","tru.q3by":"German Galo","tru.q3role":"School Principal · Discovery School",

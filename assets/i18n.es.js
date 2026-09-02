@@ -7,7 +7,7 @@ window.MENTO_I18N.es = {
   "hero.s1":"El futuro no se","hero.s2":"decide en una tarde.","hero.s3":"Se acompaña seis años.",
   "hero.sub":"Mento.IA es el programa de orientación vocacional que camina junto a cada persona durante toda la secundaria — y le devuelve al profesional el tiempo para acompañar de verdad.",
   "hero.cta1":"Solicitar una demo","hero.cta2":"Ver cómo funciona",
-  "hero.m1n":"5 hs","hero.m1l":"Duración de cada programa anual","hero.m2n":"100%","hero.m2l":"Implementación Mento.IA","hero.m3n":"0%","hero.m3l":"Carga extra al profesional","hero.m4n":"+2.000 hs","hero.m4l":"Ahorro anual por profesional",
+  "hero.m1n":"1 h","hero.m1l":"Duración de cada programa anual","hero.m2n":"100%","hero.m2l":"Implementación Mento.IA","hero.m3n":"0%","hero.m3l":"Carga extra al profesional","hero.m4n":"+2.000 hs","hero.m4l":"Ahorro anual por profesional",
   "hero.v1":"12 · Autoconocimiento","hero.v2":"15 · Orientación","hero.v3":"18 · Decisión","hero.scroll":"Desliza",
 
   "mq.1":"Autoconocimiento primero","mq.2":"Orientación vocacional","mq.3":"Seis años de acompañamiento","mq.4":"IA con criterio","mq.5":"Familias e instituciones","mq.6":"Focused on your future",
@@ -77,7 +77,7 @@ window.MENTO_I18N.es = {
   "sys.lead":"Un circuito llave en mano dentro de Mento.IA, conectado con el resto de plataformas de MyPath.IA.",
   "sys.tab1":"Implementación","sys.tab2":"Ecosistema MyPath.IA",
   "sys.i1dur":"Sin carga para el colegio","sys.i1t":"Inicio","sys.i1d":"La implementación es 100% de Mento.IA. El colegio no hace nada: solo comparte los datos de los alumnos y nosotros nos encargamos del resto.",
-  "sys.i2dur":"Duración · 5 horas","sys.i2t":"El camino","sys.i2d":"El alumno comienza el programa que corresponde a su año escolar, con un recorrido guiado de aproximadamente 5 horas.",
+  "sys.i2dur":"Duración · 1 hora","sys.i2t":"El camino","sys.i2d":"El alumno comienza el programa que corresponde a su año escolar, con un recorrido guiado de aproximadamente 1 hora.",
   "sys.i3dur":"+20 funcionalidades","sys.i3t":"Reporte","sys.i3d":"Finalizado el programa, el docente genera los reportes de cada alumno sin intervención de Mento.IA, con más de 20 funcionalidades a disposición de docentes y coordinadores.",
   "sys.i4dur":"Acceso todo el año","sys.i4t":"Sin límites","sys.i4d":"El alumno tiene su reporte digital en su usuario. En los dos últimos años, además, obtiene acceso ilimitado a My Campus.IA —el buscador universitario más potente del mundo— durante todo el año.",
   "sys.ecoa":"Mento.IA es el nexo entre","sys.ecohl":"la etapa escolar y el futuro.","sys.enow":"Estás aquí",
@@ -86,7 +86,7 @@ window.MENTO_I18N.es = {
   "sys.e3age":"17–18+ años","sys.e3t":"My Campus.IA","sys.e3d":"Decisión universitaria y plan de futuro con el buscador global de carreras.",
 
   "tru.eyebrow":"Confían en nosotros","tru.h2a":"Instituciones","tru.h2hl":"que ya avanzan.",  "tru.s1n":"12+","tru.s1l":"colegios e instituciones","tru.s2n":"8+","tru.s2l":"países representados",
-  "tru.s3n":"2.000+","tru.s3l":"personas en seguimiento","tru.s4n":"+5","tru.s4l":"idiomas nativos del programa",
+  "tru.s3n":"2.000+","tru.s3l":"personas en seguimiento","tru.s4n":"+7","tru.s4l":"idiomas nativos del programa",
   "tru.q1":"La experiencia fue muy positiva. Destacaron el impacto en la definición de la orientación vocacional y el módulo de opciones universitarias.","tru.q1by":"Diego Rubiolo","tru.q1role":"Director · Mar del Plata Day School",
   "tru.q2":"Una herramienta clave en el proceso de elección de carrera. El equipo de orientación redujo a la mitad el tiempo de preparación de reportes.","tru.q2by":"Red Salesiana","tru.q2role":"España · Argentina · Chile",
   "tru.q3":"Me gusta mucho porque es interactivo, atractivo a la vista y muy sencillo de entender y manejar.","tru.q3by":"German Galo","tru.q3role":"School Principal · Discovery School",
